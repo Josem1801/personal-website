@@ -206,7 +206,7 @@ export default function Home() {
     </div>
   );
 }
-
+/* eslint-disable */
 const data = [
   {
     title: "Colors Clone",

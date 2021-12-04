@@ -15,7 +15,9 @@ function ProyectCard({
       rel="noreferrer"
       target="_blank"
     >
-      <Image src={hrefImage} alt={title} layout="fill" />
+      <div className={styles.card__image}>
+        <Image src={hrefImage} alt={title} layout="fill" />
+      </div>
       <div className={styles.card__information}>
         <p className={styles.cart__informationTitle}>{title}</p>
         <span className={styles.cart__informationTechnologies}>
