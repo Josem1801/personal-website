@@ -7,7 +7,7 @@ import MyPhoto from "../public/photo.jpg";
 import ProyectCard from "src/components/ProyectCard";
 import Coolors from "public/coolors-clone.png";
 import RPSLS from "public/rock-papper-sccisor-lizard-spock.jpg";
-import Delivery from "public/delivery.svg";
+import Delivery from "public/delivery.png";
 import TODOApp from "public/todo-app.jpg";
 import CoinTest from "public/cointest.png";
 import { FaPaperPlane } from "react-icons/fa";
