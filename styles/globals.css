@@ -1,16 +1,187 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,700&display=swap");
+
+/*
+----------------------------------------------
+|                SETTINGS                  |
+---------------------------------------------
+*/
+:root {
+  /*Colors*/
+  --circle-bg-green: rgba(40, 164, 67, 0.2);
+  --circle-bg-blue: rgba(46, 87, 232, 0.2);
+  --blue: #3c38fe;
+  --white: #eeeeee;
+  --black: black;
+  --font-color: #eeeeee;
+  --black-blur: rgba(28, 28, 28, 0.9);
+  --light-green: #51ff8c;
+
+  /*Font-size*/
+  --font-small: 12px;
+  --font-medium: 18px;
+  --font-large: 24px;
+  --font-x-large: 35px;
+  --font-xx-large: 50px;
+
+  /*Font-family*/
+  --roboto-condensed: "Roboto Condensed", sans-serif;
+  --roboto: "Roboto", sans-serif;
+
+  /*Visibility*/
+  --display-none: none;
+  --display-visible: visible;
 }
+
+/*
+----------------------------------------------
+|                GENERIC                    |
+---------------------------------------------
+*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar {
+  width: 6px;
+
+  z-index: 2;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--white);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: var(--black);
+}
+/*
+----------------------------------------------
+|                ELEMENTS                  |
+---------------------------------------------
+*/
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
+  font-family: var(--roboto);
+}
+ul {
+  list-style: none;
 }
 
-* {
-  box-sizing: border-box;
+h1 {
+  font-size: inherit;
+}
+.fas {
+  cursor: pointer;
+}
+.emoji {
+  font-size: calc(var(--font-x-large) - 10px);
+}
+.jquery {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  margin: 0 5px;
+}
+.title {
+  font-size: var(--font-x-large);
+  margin-bottom: 0.9em;
+  text-align: center;
+  text-decoration: underline;
+}
+legend {
+  color: var(--white);
+}
+input:focus {
+  border: 1px solid var(--blue);
+}
+textarea {
+  outline: 1px solid var(--blue);
+}
+input,
+textarea {
+  border: 1px solid var(--white);
+}
+textarea {
+  outline: none;
+}
+textarea:focus,
+input:focus {
+  border: 2px solid var(--blue);
+}
+main {
+  max-width: 2000px;
+}
+main * {
+  z-index: 3;
+  transition: background 0.3s ease-in-out;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 20px;
+  max-width: 2000px;
+  background: var(--black-blur);
+  color: var(--white);
+  font-size: var(--font-large);
+}
+footer > a {
+  margin: 0 1em;
+  z-index: 5;
+  transition: transform 0.2s ease-out;
+  will-change: transform;
+}
+footer > a:hover {
+  transform: rotate3d(1, 300, 100, -20deg) scale(1.6);
+}
+/*
+----------------------------------------------
+|                COMPONENTS                  |
+---------------------------------------------
+*/
+.btn {
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue);
+  margin: 0 1em;
+  color: white;
+  border-style: none;
+  border-radius: 10px;
+  box-shadow: -8px 8px 5px 0 rgba(0, 0, 0, 0.5);
+  will-change: color, background;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+.btn:hover {
+  background: white;
+  color: var(--blue);
+}
+
+/*
+----------------------------------------------
+|                UTILITIES                  |
+---------------------------------------------
+*/
+
+.darkTheme {
+  /*Colors*/
+  --circle-bg-green: rgba(64, 187, 91, 0.5);
+  --circle-bg-blue: rgba(58, 84, 179, 0.5);
+  --blue: #3c38fe;
+  --font-color: black;
+  --black: #eeeeee;
+  --white: black;
+  --black-blur: #eeeeeeb3;
+  --background: ;
+  --display-none: visible;
+  --display-visible: none;
 }
