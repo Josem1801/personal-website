@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   position: fixed;
-  width: 100%;
+  width: 102%;
   height: 5em;
   padding: 0 10%;
   top: 0;
@@ -61,7 +61,7 @@
   padding: 3px 1px;
 }
 .header__nav a::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: 0;
@@ -267,7 +267,7 @@
   align-items: center;
   justify-content: space-evenly;
   width: 22.5em;
-  height: 25em;
+  height: 28em;
   background: transparent;
   backdrop-filter: blur(50px);
   border: 1px dashed var(--white);
@@ -287,6 +287,7 @@
   border-radius: 1em;
   padding: 1em;
   font-family: var(--roboto);
+  font-weight: 300;
 }
 .contacto__form span {
   position: relative;

@@ -1,17 +1,17 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import { FaSun, FaMoon } from "react-icons/fa";
-import { useState } from "react";
-import MyPhoto from "../public/photo.jpg";
-import ProyectCard from "src/components/ProyectCard";
-import Coolors from "public/coolors-clone.png";
-import RPSLS from "public/rock-papper-sccisor-lizard-spock.jpg";
-import Delivery from "public/delivery.png";
-import TODOApp from "public/todo-app.jpg";
-import CoinTest from "public/cointest.png";
-import { FaPaperPlane } from "react-icons/fa";
-import { AiOutlineMenu } from "react-icons/ai";
+import Head from 'next/head';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import { FaSun, FaMoon } from 'react-icons/fa';
+import { useState } from 'react';
+import MyPhoto from '../public/iam.jpg';
+import ProyectCard from 'src/components/ProyectCard';
+import Coolors from 'public/coolors-clone.png';
+import RPSLS from 'public/rock-papper-sccisor-lizard-spock.jpg';
+import Delivery from 'public/delivery.png';
+import TODOApp from 'public/todo-app.jpg';
+import CoinTest from 'public/cointest.png';
+import { FaPaperPlane } from 'react-icons/fa';
+import { AiOutlineMenu } from 'react-icons/ai';
 import {
   SiHtml5,
   SiCss3,
@@ -24,9 +24,9 @@ import {
   SiGithub,
   SiCodepen,
   SiLinkedin,
-} from "react-icons/si";
-import { AiOutlineRight } from "react-icons/ai";
-import { IoLogoSass } from "react-icons/io";
+} from 'react-icons/si';
+import { AiOutlineRight } from 'react-icons/ai';
+import { IoLogoSass } from 'react-icons/io';
 export default function Home() {
   const [lightTheme, setLightTheme] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
@@ -34,7 +34,7 @@ export default function Home() {
     setLightTheme(!lightTheme);
   }
   return (
-    <div className={`${styles.container} ${lightTheme && "darkTheme"}`}>
+    <div className={`${styles.container} ${lightTheme && 'darkTheme'}`}>
       <Head>
         <title>Jose Manuel Rosales</title>
         <meta name="description" content="José Manuel Rosales Gómez" />
@@ -45,8 +45,8 @@ export default function Home() {
           J
         </a>
         <ul className={`${styles.header__nav} ${menuActive && styles.active}`}>
-          {menu.map(({ name, section }) => (
-            <li key={name} className={styles.header__menu}>
+          {menu.map(({ name, section }, idx) => (
+            <li key={idx} className={styles.header__menu}>
               <a href={section}>{name}</a>
             </li>
           ))}
@@ -209,9 +209,9 @@ export default function Home() {
 /* eslint-disable */
 const data = [
   {
-    title: "Colors Clone",
+    title: 'Colors Clone',
     image: Coolors,
-    href: "https://clone-coolors-page.vercel.app/",
+    href: 'https://clone-coolors-page.vercel.app/',
     technologies: [
       <SiHtml5 fontSize={25} color="#f88c11" />,
       <SiReact fontSize={25} color="#1869ff" />,
@@ -219,9 +219,9 @@ const data = [
     ],
   },
   {
-    title: "Rock, Papper, Sccisor, Lizard, Spock",
+    title: 'Rock, Papper, Sccisor, Lizard, Spock',
     image: RPSLS,
-    href: "https://rock-paper-scissor-lizard-spock-vercel.vercel.app/",
+    href: 'https://rock-paper-scissor-lizard-spock-vercel.vercel.app/',
     technologies: [
       <SiHtml5 fontSize={25} color="#f88c11" />,
       <SiJavascript fontSize={25} color="#ffd900" />,
@@ -229,9 +229,9 @@ const data = [
     ],
   },
   {
-    title: "CoinMarketTest",
+    title: 'CoinMarketTest',
     image: CoinTest,
-    href: "https://criptomarket.vercel.app/home",
+    href: 'https://criptomarket.vercel.app/home',
     technologies: [
       <SiHtml5 fontSize={25} color="#f88c11" />,
       <SiCss3 fontSize={25} color="#001eca" />,
@@ -239,9 +239,9 @@ const data = [
     ],
   },
   {
-    title: "TODO App",
+    title: 'TODO App',
     image: TODOApp,
-    href: "https://todo-list-app-delta.vercel.app/",
+    href: 'https://todo-list-app-delta.vercel.app/',
     technologies: [
       <SiHtml5 fontSize={25} color="#f88c11" />,
       <SiCss3 fontSize={25} color="#001eca" />,
@@ -249,9 +249,9 @@ const data = [
     ],
   },
   {
-    title: "Delivery Food App",
+    title: 'Delivery Food App',
     image: Delivery,
-    href: "https://delivery-food-app.vercel.app/",
+    href: 'https://delivery-food-app.vercel.app/',
     technologies: [
       <SiHtml5 fontSize={25} color="#f88c11" />,
       <SiCss3 fontSize={25} color="#001eca" />,
@@ -264,15 +264,15 @@ const data = [
 
 const menu = [
   {
-    name: "Home",
-    section: "#home",
+    name: 'Home',
+    section: '#home',
   },
   {
-    name: "Proyectos",
-    section: "#proyectos",
+    name: 'Proyectos',
+    section: '#proyectos',
   },
   {
-    name: "Contacto",
-    section: "#contacto",
+    name: 'Contacto',
+    section: '#contacto',
   },
 ];
